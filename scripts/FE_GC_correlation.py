@@ -62,6 +62,7 @@
 
 # #plt.show()
 
+###works great - for thesis 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -69,7 +70,7 @@ import seaborn as sns
 from scipy import stats
 
 # Load the CSV data into a pandas DataFrame
-csv_file = '/home/projects/zeevid/Analyses/2023-Tamir/secondary_structures/plots/Marine/mean/diff_gc_10_mod_merged/diff_gc_10_mod_summary_marine_mean.csv'
+csv_file = '/home/projects/zeevid/Analyses/2023-Tamir/secondary_structures/plots/Soil/mean/diff_gc_10_mod_merged/diff_gc_10_mod_summary__mean.csv'
 data = pd.read_csv(csv_file)
 
 # Create figure and axis with a specific size
@@ -93,7 +94,7 @@ plt.plot(x_range, y_range, color='red', linestyle='--',
          label=f'y = {slope:.2f}x + {intercept:.2f}\nR² = {r_squared:.2f} n={len(data)}')
 
 # Customize the plot
-plt.title('Marine - GC Content vs Free Energy per Sample', 
+plt.title('Soil - GC Content vs Free Energy per Sample', 
           fontsize=14, pad=20)
 plt.xlabel('Mean GC Rank', fontsize=12)
 plt.ylabel('Mean FE Rank', fontsize=12)
@@ -108,7 +109,7 @@ plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
 plt.tight_layout()
 
 # Save the plot
-plt.savefig('/home/projects/zeevid/Analyses/2023-Tamir/secondary_structures/plots/Marine/mean/diff_gc_10_mod_merged/FE_GC_correlation_scatter_merged.png', 
+plt.savefig('/home/projects/zeevid/Analyses/2023-Tamir/secondary_structures/plots/Soil/mean/diff_gc_10_mod_merged/FE_GC_correlation_scatter_merged.png', 
             dpi=300, 
             bbox_inches='tight')
 
